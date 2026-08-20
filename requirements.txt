@@ -1,0 +1,12 @@
+pillow
+pymupdf
+paddleocr
+paddlepaddle-gpu==3.3.1
+paddlex[ocr]
+rich
+bm25s
+numpy
+httpx
+openai
+transformers
+torch

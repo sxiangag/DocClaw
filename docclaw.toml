@@ -1,0 +1,112 @@
+# DocClaw runtime configuration
+
+[runtime]
+max_steps = 40
+session_max_messages = 20
+
+[providers.openai_codex]
+name = "openai_codex"
+model = "openai-codex/gpt-5.2"
+request_timeout = 60.0
+verify_ssl = true
+allow_insecure_ssl_fallback = true
+
+[providers.anthropic]
+name = "anthropic"
+model = "claude-sonnet-4-20250514"
+api_key = "$ANTHROPIC_API_KEY"
+request_timeout = 120.0
+verify_ssl = true
+allow_insecure_ssl_fallback = true
+
+[providers.gemini]
+name = "gemini"
+model = "gemini-2.5-flash"
+api_key = "$GEMINI_API_KEY"
+request_timeout = 120.0
+verify_ssl = true
+allow_insecure_ssl_fallback = true
+
+[providers.openai]
+name = "openai"
+model = "gpt-5.4"
+api_key = "$OPENAI_API_KEY"
+
+[planner]
+provider = "gemini"
+temperature = 0.0
+
+[tools.layout]
+enabled = true
+device = "gpu:0"
+
+[tools.formula]
+enabled = true
+
+[tools.chart]
+enabled = false
+device = "gpu:0"
+
+[tools.table]
+enabled = true
+device = "gpu:0"
+
+[tools.internal_search]
+enabled = true
+provider = "lexical"
+
+[tools.zoom]
+enabled = true
+
+[tools.crop]
+enabled = true
+
+[tools.ocr_enhancement]
+enabled = true
+
+[tools.ocr]
+enabled = true
+device = "gpu:0"
+
+[tools.figure]
+enabled = true
+provider = "gemini"
+temperature = 0.0
+
+[tools.select_pages]
+enabled = true
+provider = "gemini"
+temperature = 0.0
+
+[tools.evidence]
+enabled = true
+provider = "gemini"
+temperature = 0.0
+
+[tools.inspect_ocr]
+enabled = true
+provider = "gemini"
+temperature = 0.0
+max_refine_regions = 10
+
+[tools.select_ocr]
+enabled = true
+provider = "gemini"
+temperature = 0.0
+
+[tools.answer_from_evidence]
+enabled = true
+provider = "gemini"
+temperature = 0.0
+
+[tools.answer_json]
+enabled = true
+provider = "gemini"
+temperature = 0.0
+
+[storage]
+root_dir = ".docclaw"
+
+[skills]
+enabled = true
+workspace_dir = "skills"

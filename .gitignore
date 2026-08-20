@@ -1,0 +1,16 @@
+.venv/
+
+.idea/
+.vscode/
+.docclaw/
+
+__pycache__/
+*.pyc
+*.pyo
+
+*.pt
+*.json
+*.log
+*.csv
+*.ipynb_checkpoints
+*.parquet

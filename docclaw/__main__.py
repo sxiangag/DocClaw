@@ -1,0 +1,7 @@
+"""Run DocClaw with ``python -m docclaw``."""
+
+from docclaw.cli import main
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
